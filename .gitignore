@@ -3,6 +3,9 @@
 
 *.o
 *.exe
+*.vcxproj.user
+*.dll
+*.pdb
 
 # /
 /autom4te*.cache
@@ -239,3 +242,5 @@
 
 # /test/sudoku.app/Contents/MacOS/
 /test/sudoku.app/Contents/MacOS/sudoku
+/ide/VisualC2017/.vs
+/ide/VisualC2017/x64
