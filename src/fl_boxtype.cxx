@@ -28,6 +28,7 @@
 #include <FL/Fl.H>
 #include <FL/Fl_Widget.H>
 #include <FL/fl_draw.H>
+#include <FL/Fl_Export.H>
 #include <config.h>
 
 ////////////////////////////////////////////////////////////////
@@ -351,7 +352,7 @@ int Fl::box_dh(Fl_Boxtype t) {return fl_box_table[t].dh;}
   \param[in] t box type
   \param[in] f box drawing function
 */
-void fl_internal_boxtype(Fl_Boxtype t, Fl_Box_Draw_F* f) {
+FL_EXPORT void fl_internal_boxtype(Fl_Boxtype t, Fl_Box_Draw_F* f) {
   if (!fl_box_table[t].set) {
     fl_box_table[t].f   = f;
     fl_box_table[t].set = 1;

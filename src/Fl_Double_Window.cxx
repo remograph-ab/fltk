@@ -24,6 +24,7 @@
 #include <FL/Fl_Double_Window.H>
 #include <FL/Fl_Overlay_Window.H>
 #include <FL/Fl_Printer.H>
+#include <FL/Fl_Export.H>
 #include <FL/x.H>
 #include <FL/fl_draw.H>
 
@@ -91,11 +92,11 @@ void Fl_Double_Window::show() {
  \param srcx,srcy origin in offscreen buffer of rectangle to copy
  */
 #if FLTK_ABI_VERSION >= 10301
-void fl_copy_offscreen(int x, int y, int w, int h, Fl_Offscreen pixmap, int srcx, int srcy) {
+FL_EXPORT void fl_copy_offscreen(int x, int y, int w, int h, Fl_Offscreen pixmap, int srcx, int srcy) {
   fl_graphics_driver->copy_offscreen(x, y, w, h, pixmap, srcx, srcy);
 }
 #else
-void fl_copy_offscreen(int x, int y, int w, int h, Fl_Offscreen pixmap, int srcx, int srcy) {
+FL_EXPORT void fl_copy_offscreen(int x, int y, int w, int h, Fl_Offscreen pixmap, int srcx, int srcy) {
 #ifdef WIN32
   if (fl_graphics_driver->class_name() == Fl_GDI_Graphics_Driver::class_id ||
       fl_graphics_driver->class_name() == Fl_GDI_Printer_Graphics_Driver::class_id) {

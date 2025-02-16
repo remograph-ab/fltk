@@ -33,7 +33,7 @@ typedef POINT XPoint;
 #include <FL/Fl_Window.H>
 
 // this part is included only when compiling the FLTK library or if requested explicitly
-#if defined(FL_LIBRARY) || defined(FL_INTERNALS) 
+//#if defined(FL_LIBRARY) || defined(FL_INTERNALS) 
 
 // In some of the distributions, the gcc header files are missing some stuff:
 #ifndef LPMINMAXINFO
@@ -103,10 +103,10 @@ inline Window fl_xid(const Fl_Window* w) { Fl_X *temp = Fl_X::i(w); return temp 
 
 extern FL_EXPORT void fl_open_display();
 
-#else
-FL_EXPORT Window fl_xid_(const Fl_Window* w);
-#define fl_xid(w) fl_xid_(w)
-#endif // FL_LIBRARY || FL_INTERNALS
+//#else
+//FL_EXPORT Window fl_xid_(const Fl_Window* w);
+//#define fl_xid(w) fl_xid_(w)
+//#endif // FL_LIBRARY || FL_INTERNALS
 
 FL_EXPORT Fl_Window* fl_find(Window xid);
 void fl_clip_region(Fl_Region);

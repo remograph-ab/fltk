@@ -42,6 +42,7 @@
 #include <FL/Fl_Secret_Input.H>
 #include <FL/x.H>
 #include <FL/fl_draw.H>
+#include <FL/Fl_Export.H>
 
 static Fl_Window *message_form;
 static Fl_Box *message;
@@ -264,11 +265,11 @@ static int innards(const char* fmt, va_list ap,
     @{ */
 
 // pointers you can use to change FLTK to another language:
-const char* fl_no = "No";        ///< string pointer used in common dialogs, you can change it to another language
-const char* fl_yes= "Yes";       ///< string pointer used in common dialogs, you can change it to another language
-const char* fl_ok = "OK";        ///< string pointer used in common dialogs, you can change it to another language
-const char* fl_cancel= "Cancel"; ///< string pointer used in common dialogs, you can change it to another language
-const char* fl_close= "Close";   ///< string pointer used in common dialogs, you can change it to another language
+FL_EXPORT const char* fl_no = "No";        ///< string pointer used in common dialogs, you can change it to another language
+FL_EXPORT const char* fl_yes= "Yes";       ///< string pointer used in common dialogs, you can change it to another language
+FL_EXPORT const char* fl_ok = "OK";        ///< string pointer used in common dialogs, you can change it to another language
+FL_EXPORT const char* fl_cancel= "Cancel"; ///< string pointer used in common dialogs, you can change it to another language
+FL_EXPORT const char* fl_close= "Close";   ///< string pointer used in common dialogs, you can change it to another language
 
 // fltk functions:
 /**

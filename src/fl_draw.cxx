@@ -27,13 +27,14 @@
 #include <FL/Fl.H>
 #include <FL/fl_draw.H>
 #include <FL/Fl_Image.H>
+#include <FL/Fl_Export.H>
 
 #include "flstring.h"
 #include <ctype.h>
 #include <math.h>
 
 
-char fl_draw_shortcut;	// set by fl_labeltypes.cxx
+FL_EXPORT char fl_draw_shortcut;	// set by fl_labeltypes.cxx
 
 static char* underline_at;
 
