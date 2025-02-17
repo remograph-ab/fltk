@@ -144,7 +144,7 @@ FL_EXPORT void fl_decode_uri(char *uri);
  * Fl_File_Chooser to avoid extra stat() calls, but is not supported
  * outside of FLTK...
  */
-int _fl_filename_isdir_quick(const char *name);
+FL_EXPORT int _fl_filename_isdir_quick(const char *name);
 #    endif
 
 #  endif /* __cplusplus */
